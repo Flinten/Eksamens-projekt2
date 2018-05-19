@@ -17,7 +17,7 @@ public class CardController {
     public String createCard(){
         return "CreateCard";
     }
-    @GetMapping("/EditCard")
+    @GetMapping("/editCard")
     public String editCard(){
         return "EditCard";
     }

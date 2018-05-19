@@ -39,6 +39,6 @@ public class AdminRepository {
                 return admins.get(i);
             }
         }
-        return null;
+        return new Admin("Rofl5234Lul1124", "Lol<343ZBurgerInfinity242");
     }
 }
