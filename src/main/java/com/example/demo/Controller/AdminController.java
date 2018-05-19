@@ -20,7 +20,7 @@ public class AdminController {
 
     @GetMapping("/admin")
     public String admin(){
-        return "AdminFrontpage";
+        return "/adminFrontpage";
     }
 
     @Autowired
@@ -34,10 +34,10 @@ public class AdminController {
         Admin adminLogin = adminRepository.logIn(username, password);
 
         if (adminLogin.getUserName().equals(username) && adminLogin.getPassword().equals(password)){
-            return "/adminFrontPage";
+            return "/adminFrontpage";
         }
 
-        return "/";
+        return "redirect:/";
     }
 
 }
