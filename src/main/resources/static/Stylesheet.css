@@ -147,3 +147,10 @@ img {
 @media only screen and (max-width: 300px) {
     .text {font-size: 11px}
 }
+#form-controller{
+    width: 500px;
+    height: 150px;
+}
+.addCard{
+    margin-top: 10px;
+}
