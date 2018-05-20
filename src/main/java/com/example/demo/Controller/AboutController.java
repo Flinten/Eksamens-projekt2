@@ -4,13 +4,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 /**
- * Created by Ejer on 11-05-2018.
+ * Created by Ejer on 18-05-2018.
  */
 @Controller
-public class FleaMarketController {
+public class AboutController {
 
-    @GetMapping("/fleamarket")
-    public String fleamarket(){
-        return "Fleamarket";
+    @GetMapping("/about")
+    public String about(){
+        return "about";
     }
+
 }
