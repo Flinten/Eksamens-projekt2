@@ -19,6 +19,6 @@ public class CardController {
     }
     @GetMapping("/editCard")
     public String editCard(){
-        return "EditCard";
+        return "editCard";
     }
 }
