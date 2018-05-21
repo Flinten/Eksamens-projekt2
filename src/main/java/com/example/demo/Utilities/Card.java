@@ -20,6 +20,13 @@ public class Card {
         this.price = price;
     }
 
+    public Card(String name, String description, double price, String imagePath) {
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.imagePath = imagePath;
+    }
+
     public Card(int cardID, String name, String description, double price, String imagePath) {
         this.cardID = cardID;
         this.name = name;
@@ -35,6 +42,7 @@ public class Card {
     public void setImagePath(String imagePath) {
         this.imagePath = imagePath;
     }
+
     public int getCardID() {
         return cardID;
     }

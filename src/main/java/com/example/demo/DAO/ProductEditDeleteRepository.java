@@ -12,7 +12,6 @@ public class ProductEditDeleteRepository {
 
     @Autowired
     private JdbcTemplate jdbc;
-    private SqlRowSet sqlRowSet;
 
     public void update(Card card, int cardID) {
         jdbc.update("UPDATE card SET "

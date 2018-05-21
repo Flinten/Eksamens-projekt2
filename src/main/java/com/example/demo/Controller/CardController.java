@@ -67,11 +67,15 @@ public class CardController {
     @GetMapping("/createCard")
     public String createCard(Model model){
         model.addAttribute("newCard", new Card());
-        return "CreateCard";
+        return "createCard";
     }
-    @PostMapping("/createC")
-    public String cardCreate(@ModelAttribute Card card, @RequestParam String name, String description, double price, String imagePath){
+    @PostMapping("/createCard")
+    public String createCard(@ModelAttribute Card card,
+                             @RequestParam("name") String name,
+                             @RequestParam("description") String description,
+                             @RequestParam("price") double price,
+                             @RequestParam("imagePath") String imagePath){
         pCR.createCard(card);
-        return "redirect:/";
+        return "redirect:/adminCard";
     }
 }

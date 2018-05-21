@@ -185,3 +185,11 @@ tr:nth-child(even) {
 tr:nth-child(odd) {
     background-color: white;
 }
+
+#form-controller{
+    width: 500px;
+    height: 150px;
+}
+.addCard{
+    margin-top: 10px;
+}

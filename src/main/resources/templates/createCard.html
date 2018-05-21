@@ -14,22 +14,24 @@
 
 
 <div style="margin-left: 40px">
-    <form method="post" action="createC">
+    <form th:action="@{/createCard}" th:method="post" th:object="${card}">
         <div>
             <h7>Overskrift: </h7>
             <br/>
             <input type="text" name="name" >
             <br/>
-            <h7 style="margin-left: 30px">Pris:</h7>
+            <h7>Pris:</h7>
             <br/>
-            <input type="text"  name="price" style="margin-left: 10px">
+            <input type="text"  name="price">
         </div>
         <div class="form-group" style="margin-top: 12px">
             Brødtekst: <textarea class="form-control" maxlength="500" rows="6" id="form-controller" name="description" ></textarea>
         </div>
         <div class="form-group">
-            Billede URL:<br/> <input type="text" name="URL">
-            <input class="addCard" type="submit" value="Tilføj">
+            Billede URL:
+            <br/>
+            <input type="text" name="imagePath">
+            <input class="addCard" type="submit" value="Tilføj" maxlength="500">
         </div>
     </form>
 </div>
