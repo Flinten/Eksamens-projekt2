@@ -8,11 +8,22 @@ public class Card {
     private String name;
     private String description;
     private double price;
+    private String imagePath;
 
     public Card(String name, String description, double price) {
         this.name = name;
         this.description = description;
         this.price = price;
+    }
+
+    public Card(String name, String description, double price, String imagePath) {
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.imagePath = imagePath;
+    }
+
+    public Card() {
     }
 
     public int getCardId() {
@@ -45,6 +56,14 @@ public class Card {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
     }
 
     @Override
