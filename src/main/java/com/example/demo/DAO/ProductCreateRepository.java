@@ -1,5 +1,8 @@
 package com.example.demo.DAO;
 
+import com.example.demo.Utilities.Card;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -8,6 +11,13 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public class ProductCreateRepository {
+    @Autowired
+    private JdbcTemplate jdbc;
 
+    public void createCard(Card card){
+        jdbc.update("INSERT INTO farmerscrap.card(name, description, price,imagePath)" +
+                "VALUES('" + card.getName() + "','" + card.getDescription() + "','" + card.getPrice() +
+                "','" + card.getImagePath()+"')");
+    }
 
 }
