@@ -24,6 +24,8 @@ public class CardController {
     ProductRepository productRepo = new ProductRepository();
     @Autowired
     ProductEditDeleteRepository productEditDeleteRepo = new ProductEditDeleteRepository();
+    @Autowired
+    ProductCreateRepository pCR = new ProductCreateRepository();
 
     private int globalID;
 
@@ -38,11 +40,6 @@ public class CardController {
         List<Card> cardList = productRepo.readAll();
         model.addAttribute("cardOverview", cardList);
         return "adminCard";
-    }
-
-    @GetMapping("/createCard")
-    public String createCard(){
-        return "createCard";
     }
 
     @GetMapping("/editCard")
@@ -65,5 +62,16 @@ public class CardController {
     public String deleteCard(@RequestParam("cardID") int cardID){
         productEditDeleteRepo.delete(cardID);
         return "redirect:/adminCard";
+    }
+
+    @GetMapping("/createCard")
+    public String createCard(Model model){
+        model.addAttribute("newCard", new Card());
+        return "CreateCard";
+    }
+    @PostMapping("/createC")
+    public String cardCreate(@ModelAttribute Card card, @RequestParam String name, String description, double price, String imagePath){
+        pCR.createCard(card);
+        return "redirect:/";
     }
 }

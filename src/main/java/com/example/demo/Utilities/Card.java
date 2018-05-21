@@ -10,7 +10,9 @@ public class Card {
     private double price;
     private String imagePath;
 
+    public Card(){
 
+    }
 
     public Card(String name, String description, double price) {
         this.name = name;
