@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="" th:href="@{Stylesheet.css}"/>
+    <meta charset="UTF-8">
+    <title>Admin kort</title>
+</head>
+<body>
+
+<header th:replace="fragments/logo :: logo"></header>
+
+<nav th:replace="fragments/adminHeader"></nav>
+
+<table>
+    <br/>
+    <tr>
+        <th>Billede</th>
+        <th>Navn</th>
+        <th>Beskrivelse</th>
+        <th></th>
+    </tr>
+    <tr th:each="cardList : ${cardOverview}">
+        <td>
+            <div>
+                <img th:src="${cardList.imagePath}" height="150px" width="100px"/>
+            </div>
+        </td>
+        <td th:text="${cardList.name}"></td>
+        <td th:text="${cardList.description}"></td>
+        <td>
+            <!-- update knappen -->
+            <a th:href="@{/editCard(cardID=${cardList.cardID})}" class="btn btn-warning btn-md">Opdater</a>
+
+            <!-- delete knappen -->
+            <a th:href="@{/deleteCard(cardID=${cardList.cardID})}" class="btn btn-danger btn-md">Fjern</a>
+        </td>
+    </tr>
+</table>
+
+
+</body>
+</html>

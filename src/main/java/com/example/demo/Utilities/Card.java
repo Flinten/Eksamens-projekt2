@@ -4,10 +4,13 @@ package com.example.demo.Utilities;
  * Created by Ejer on 11-05-2018.
  */
 public class Card {
-    private int cardId;
+    private int cardID;
     private String name;
     private String description;
     private double price;
+    private String imagePath;
+
+
 
     public Card(String name, String description, double price) {
         this.name = name;
@@ -15,12 +18,27 @@ public class Card {
         this.price = price;
     }
 
-    public int getCardId() {
-        return cardId;
+    public Card(int cardID, String name, String description, double price, String imagePath) {
+        this.cardID = cardID;
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.imagePath = imagePath;
     }
 
-    public void setCardId(int cardId) {
-        this.cardId = cardId;
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
+    }
+    public int getCardID() {
+        return cardID;
+    }
+
+    public void setCardID(int cardID) {
+        this.cardID = cardID;
     }
 
     public String getName() {
@@ -50,7 +68,7 @@ public class Card {
     @Override
     public String toString() {
         return "Card{" +
-                "cardId=" + cardId +
+                "cardID=" + cardID +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", price=" + price +

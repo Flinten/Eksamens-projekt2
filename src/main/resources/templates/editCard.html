@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Card</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="" th:href="@{Stylesheet.css}"/>
+
+    <title>Rediger Kort</title>
+</head>
+<body>
+
+<header th:replace="fragments/logo :: logo"></header>
+
+<nav th:replace="fragments/adminHeader"></nav>
+
+<div class="container-fluid">
+    <div class="col-lg-4">
+        <form th:action="@{/editCard}" th:method="post" th:object="${card}">
+            <div class="form-group form-inline">
+                <h7>Overskrift:</h7>
+                <br/>
+                <input th:field="${card.name}" type="text"/>
+                <br/>
+                <h7>Pris:</h7>
+                <br/>
+                <input th:field="${card.price}" type="text"/>
+            </div>
+            <div class="form-group">
+                <h7>Beskrivelse</h7>
+                <textarea th:field="${card.description}" maxlength="500" rows="6" class="form-control" id="description"
+                          style="width: 60%;">
+                </textarea>
+            </div>
+            <div class="form-inline form-group col-sm-6">
+                <h7 for="imagePath" class="edit-act-label text-min-width">Billedsti:</h7>
+                <input type="text" required="required" id="imagePath" class="form-control" th:field="${card.imagePath}"/>
+                <div>
+                    <input type="submit" class="btn btn-succes" name="action" value="Gem oplysninger"/>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+</div>
+
+</body>
+</html>
