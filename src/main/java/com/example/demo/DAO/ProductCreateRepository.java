@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 /**
  * Created by Ejer on 11-05-2018.
  */
+
 @Repository
 public class ProductCreateRepository {
     @Autowired
@@ -18,4 +19,5 @@ public class ProductCreateRepository {
                 "VALUES('" + card.getName() + "','" + card.getDescription() + "','" + card.getPrice() +
                 "','" + card.getImagePath()+"')");
     }
+
 }

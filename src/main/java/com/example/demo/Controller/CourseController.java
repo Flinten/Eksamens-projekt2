@@ -11,14 +11,6 @@ public class CourseController {
 
     @GetMapping("/course")
     public String course(){
-        return "Course";
-    }
-    @GetMapping("/createCourse")
-    public String createCourse(){
-        return "CreateCourse";
-    }
-    @GetMapping("/EditCourse")
-    public String editCourse(){
-        return "EditCourse";
+        return "course";
     }
 }

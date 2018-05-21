@@ -11,6 +11,6 @@ public class FleaMarketController {
 
     @GetMapping("/fleamarket")
     public String fleamarket(){
-        return "Fleamarket";
+        return "fleamarket";
     }
 }

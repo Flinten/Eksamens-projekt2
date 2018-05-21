@@ -10,10 +10,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class NewsController {
     @GetMapping("/news")
     public String news(){
-        return "News";
-    }
-    @GetMapping("/CreateNews")
-    public String createNews(){
-        return "CreateNews";
+        return "news";
     }
 }
