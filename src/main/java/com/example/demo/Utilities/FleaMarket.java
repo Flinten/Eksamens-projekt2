@@ -8,6 +8,11 @@ public class FleaMarket {
     private String name;
     private String description;
     private double price;
+    private String imagePath;
+
+
+    public FleaMarket() {
+    }
 
     public FleaMarket(String name, String description, double price) {
         this.name = name;
@@ -15,22 +20,39 @@ public class FleaMarket {
         this.price = price;
     }
 
+    public FleaMarket(String name, String description, double price, String imagePath) {
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.imagePath = imagePath;
+    }
+
+    public FleaMarket(int fleaMarketID, String name, String description, double price, String imagePath) {
+        this.fleaMarketID = fleaMarketID;
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.imagePath = imagePath;
+    }
+
     @Override
     public String toString() {
         return "FleaMarket{" +
-                "fleaMarketId=" + fleaMarketID +
+                "fleaMarketID=" + fleaMarketID +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", price=" + price +
+                ", imagePath='" + imagePath + '\'' +
                 '}';
     }
+
 
     public int getFleaMarketID() {
         return fleaMarketID;
     }
 
-    public void setFleaMarketID(int fleaMarketId) {
-        this.fleaMarketID = fleaMarketId;
+    public void setFleaMarketID(int fleaMarketID) {
+        this.fleaMarketID = fleaMarketID;
     }
 
     public String getName() {
@@ -53,7 +75,16 @@ public class FleaMarket {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(double price)
+    {
         this.price = price;
+    }
+
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
     }
 }

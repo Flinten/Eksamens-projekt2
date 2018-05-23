@@ -33,14 +33,16 @@ public class ProductRepository {
         return cards;
     }
 
-    public Card read(int cardID){
-        sqlRowSet = jdbc.queryForRowSet("SELECT * FROM card WHERE cardID="+ cardID);
-        while(sqlRowSet.next()){
-            return new Card(sqlRowSet.getInt("cardID"),sqlRowSet.getString("name"),
+    public Card read(int cardID) {
+        sqlRowSet = jdbc.queryForRowSet("SELECT * FROM card WHERE cardID=" + cardID);
+        while (sqlRowSet.next()) {
+            return new Card(sqlRowSet.getInt("cardID"), sqlRowSet.getString("name"),
                     sqlRowSet.getString("description"), sqlRowSet.getDouble("price"),
                     sqlRowSet.getString("imagePath"));
         }
         return null;
     }
+
+
 
 }
