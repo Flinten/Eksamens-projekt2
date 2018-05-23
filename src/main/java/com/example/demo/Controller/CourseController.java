@@ -23,10 +23,8 @@ public class CourseController {
 
     @GetMapping("/course")
     public String course(Model model){
-        List<Course> courseList = new ArrayList<>();
-        courseList = courseRepo.readAll();
+        List<Course> courseList = courseRepo.readAll();
         model.addAttribute("courseOverview", courseList);
-        System.out.println(courseList);
         return "course";
     }
 }

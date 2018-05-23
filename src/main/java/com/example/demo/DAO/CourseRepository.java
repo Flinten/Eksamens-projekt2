@@ -23,11 +23,9 @@ public class CourseRepository {
 
     public List<Course> readAll() {
         List<Course> courses = new ArrayList<>();
-        sqlRowSet = jdbc.queryForRowSet("SELECT * FROM eksamensprojekt.course");
+        sqlRowSet = jdbc.queryForRowSet("SELECT * FROM course ORDER BY date DESC");
 
-        System.out.println("Hallo");
         while(sqlRowSet.next()){
-            System.out.println("Hallo");
             courses.add(new Course(sqlRowSet.getInt("courseID"), sqlRowSet.getString("headline")
                     ,sqlRowSet.getString("description"), sqlRowSet.getDate("date")
                     ,sqlRowSet.getString("imagePath") ,sqlRowSet.getDouble("price")));
