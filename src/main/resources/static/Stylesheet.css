@@ -193,3 +193,9 @@ tr:nth-child(odd) {
 .addCard{
     margin-top: 10px;
 }
+
+p{
+    float: left;
+    margin-left: 10px;
+}
+
