@@ -23,7 +23,7 @@ public class NewsRepository {
 //  XP projekt
     public ArrayList<News> readAll() {
         ArrayList<News> newsList = new ArrayList<>();
-        sqlRowSet = jdbc.queryForRowSet("SELECT * FROM news");
+        sqlRowSet = jdbc.queryForRowSet("SELECT * FROM news ORDER BY date DESC");
 
         while(sqlRowSet.next()) {
             newsList.add(new News(sqlRowSet.getInt("newsID"), sqlRowSet.getString("headline"),
