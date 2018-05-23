@@ -21,14 +21,15 @@
             </td>
             <td>
                 <div>
-                    <h7 th:text="${newsList.headline}"></h7>
+                    <h7 th:text="${newsList.date}"></h7>
                     <div>
-                        <h7 th:date="${newsList.date}"></h7>
+                        <h7 th:text="${newsList.headline}"></h7>
                     </div>
                     <br/>
-                    <textarea th:text="${newsList.description}" maxlength="500" rows="6" class="form-control"></textarea>
+                    <p th:text="${newsList.description}" width="500px"></p>
                 </div>
             </td>
+            <td></td>
         </tr>
     </table>
 
