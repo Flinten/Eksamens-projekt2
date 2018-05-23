@@ -4,7 +4,7 @@ package com.example.demo.Utilities;
  * Created by Ejer on 11-05-2018.
  */
 public class FleaMarket {
-    private int fleaMarketId;
+    private int fleaMarketID;
     private String name;
     private String description;
     private double price;
@@ -18,19 +18,19 @@ public class FleaMarket {
     @Override
     public String toString() {
         return "FleaMarket{" +
-                "fleaMarketId=" + fleaMarketId +
+                "fleaMarketId=" + fleaMarketID +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", price=" + price +
                 '}';
     }
 
-    public int getFleaMarketId() {
-        return fleaMarketId;
+    public int getFleaMarketID() {
+        return fleaMarketID;
     }
 
-    public void setFleaMarketId(int fleaMarketId) {
-        this.fleaMarketId = fleaMarketId;
+    public void setFleaMarketID(int fleaMarketId) {
+        this.fleaMarketID = fleaMarketId;
     }
 
     public String getName() {
