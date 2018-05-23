@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -23,6 +23,7 @@
                         </h4>
                     </div>
                     <div class="col-sm-3">
+                        <h4 style="margin-left: 175px;">Pris: </h4>
                         <h4 th:text="${fleamarketList.price}" style="margin-left: 175px;"></h4>
                     </div>
                     <div class="col-sm-3" style="width: 800px">
@@ -31,7 +32,6 @@
                     </div>
                 </div>
             </td>
-
         </tr>
     </table>
 </div>
