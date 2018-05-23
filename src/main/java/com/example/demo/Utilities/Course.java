@@ -6,7 +6,7 @@ import java.sql.Date;
  * Created by Ejer on 11-05-2018.
  */
 public class Course {
-    private int courseId;
+    private int courseID;
     private String headline;
     private String description;
     private double price;
@@ -22,7 +22,7 @@ public class Course {
     @Override
     public String toString() {
         return "Course{" +
-                "courseId=" + courseId +
+                "courseId=" + courseID +
                 ", headline='" + headline + '\'' +
                 ", description='" + description + '\'' +
                 ", price=" + price +
@@ -30,12 +30,13 @@ public class Course {
                 '}';
     }
 
-    public int getCourseId() {
-        return courseId;
+
+    public int getCourseID() {
+        return courseID;
     }
 
-    public void setCourseId(int courseId) {
-        this.courseId = courseId;
+    public void setCourseID(int courseId) {
+        this.courseID = courseId;
     }
 
     public String getHeadline() {
