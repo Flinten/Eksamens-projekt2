@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container" th:fragment="cardTable">
+    <table>
+        <br/>
+
+        <tr th:each="cardList : ${cardOverview}">
+            <td>
+                <div>
+                    <img th:src="${cardList.imagePath}" height="150px" width="150px" style="float: left;"/>
+                </div>
+                <div class="row">
+                    <div class="col">
+
+                    </div>
+                    <div class="col-sm-7">
+                        <h4 th:text="${cardList.name}">
+                        </h4>
+                    </div>
+                    <div class="col-sm-3">
+                        <h4 th:text="${cardList.price}" style="margin-left: 175px;">
+                            Pris: 99kr
+                        </h4>
+                    </div>
+                    <div class="col-sm-3" style="width: 800px">
+                        <h5 th:text="${cardList.description}">
+                        </h5>
+                    </div>
+                </div>
+            </td>
+
+        </tr>
+    </table>
+</div>
+</body>
+</html>

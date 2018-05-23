@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -31,7 +32,9 @@ public class CardController {
 
 
     @GetMapping("/card")
-    public String card(){
+    public String card(Model model){
+        List<Card> cardList = productRepo.readAll();
+        model.addAttribute("cardOverview", cardList);
         return "card";
     }
 
