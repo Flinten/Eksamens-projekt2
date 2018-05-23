@@ -9,14 +9,24 @@ public class Course {
     private int courseID;
     private String headline;
     private String description;
-    private double price;
     private Date date;
+    private String imagePath;
+    private double price;
 
     public Course(String headline, String description, double price, Date date) {
         this.headline = headline;
         this.description = description;
         this.price = price;
         this.date = date;
+    }
+
+    public Course(int courseID, String headline, String description, Date date, String imagePath, double price) {
+        this.courseID = courseID;
+        this.headline = headline;
+        this.description = description;
+        this.date = date;
+        this.imagePath = imagePath;
+        this.price = price;
     }
 
     @Override
@@ -35,8 +45,8 @@ public class Course {
         return courseID;
     }
 
-    public void setCourseID(int courseId) {
-        this.courseID = courseId;
+    public void setCourseID(int courseID) {
+        this.courseID = courseID;
     }
 
     public String getHeadline() {
@@ -69,5 +79,13 @@ public class Course {
 
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
     }
 }

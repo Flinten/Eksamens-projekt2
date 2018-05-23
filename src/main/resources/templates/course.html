@@ -12,6 +12,36 @@
 
     <nav th:replace="fragments/header :: header"></nav>
 
+    <div class="container">
+        <table>
+            <br/>
 
+            <tr th:each="courseList : ${courseOverview}">
+                <td>
+                    <div>
+                        <img th:src="${courseList.imagePath}" height="150px" width="150px" style="float: left;"/>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+
+                        </div>
+                        <div class="col-sm-7">
+                            <h4 th:text="${courseList.headline}">
+                            </h4>
+                        </div>
+                        <div class="col-sm-3">
+                            <h4 style="margin-left: 175px;">Pris: </h4>
+                            <h4 th:text="${courseList.price}" style="margin-left: 175px;"></h4>
+                        </div>
+                        <div class="col-sm-3" style="width: 800px">
+                            <h5 th:text="${courseList.description}">
+                            </h5>
+                        </div>
+                    </div>
+                </td>
+
+            </tr>
+        </table>
+    </div>
 </body>
 </html>
