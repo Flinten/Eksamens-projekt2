@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container" th:fragment="productTable">
+    <table>
+        <br/>
+
+        <tr> <!--th:each="cardList : ${cardOverview}"-->
+            <td>
+                <div>
+                    <img src="" height="150px" width="150px" style="float: left;"/>
+                </div>
+                <div class="row">
+                    <div class="col">
+
+                    </div>
+                    <div class="col-sm-7">
+                        <h4>
+                            Overskrift
+                        </h4>
+                    </div>
+                    <div class="col-sm-3">
+                        <h4 style="margin-left: 175px;">
+                            Pris: 99kr
+                        </h4>
+                    </div>
+                    <div class="col-sm-3" style="width: 800px">
+                        <h5>
+                            Det er en kendsgerning, at man bliver distraheret af læsbart indhold på en side, når man betragter dens layout. Meningen med at bruge Lorem Ipsum er, at teksten indeholder mere eller mindre almindelig tekstopbygning i modsætning til "Tekst her – og mere tekst her", mens det samtidigt ligner almindelig tekst. Mange layoutprogrammer og webdesignere bruger Lorem Ipsum som fyldtekst. En søgning på Lorem Ipsum afslører mange websider, som stadig er på udviklingsstadiet. Der har været et utal af variationer, som er opstået enten på grund af fejl og andre gange med vilje (som blandt andet et resultat af humor).
+                        </h5>
+                    </div>
+                </div>
+            </td>
+
+        </tr>
+    </table>
+</div>
+</body>
+</html>

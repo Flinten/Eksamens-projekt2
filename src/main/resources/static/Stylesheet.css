@@ -89,6 +89,10 @@ body {
     box-sizing: border-box;
 }
 
+.mySlides {
+    display: none;
+}
+
 img {
     vertical-align: middle;
     display: block;
@@ -189,3 +193,9 @@ tr:nth-child(odd) {
 .addCard{
     margin-top: 10px;
 }
+
+p{
+    float: left;
+    margin-left: 10px;
+}
+
