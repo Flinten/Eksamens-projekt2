@@ -12,26 +12,28 @@
 
     <nav th:replace="fragments/header :: header"></nav>
 
-    <table>
-        <tr th:each="newsList : ${newsOverview}">
-            <td>
-                <div>
-                    <img th:src="${newsList.imagePath}" height="200px" width="150px"/>
-                </div>
-            </td>
-            <td>
-                <div>
-                    <h7 th:text="${newsList.headline}"></h7>
+    <div class="container">
+        <table>
+            <tr th:each="newsList : ${newsOverview}">
+                <td>
                     <div>
-                        <h7 th:date="${newsList.date}"></h7>
+                        <img th:src="${newsList.imagePath}" height="200px" width="150px"/>
                     </div>
-                    <br/>
-                    <textarea th:text="${newsList.description}" maxlength="500" rows="6" class="form-control"></textarea>
-                </div>
-            </td>
-        </tr>
-    </table>
-
+                </td>
+                <td>
+                    <div>
+                        <h7 th:text="${newsList.date}"></h7>
+                        <div>
+                            <h7 th:text="${newsList.headline}"></h7>
+                        </div>
+                        <br/>
+                        <p th:text="${newsList.description}" width="500px"></p>
+                    </div>
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
 
 </body>
 </html>
